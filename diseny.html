@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Disney World Attractions</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Verdana;
+    text-align:center;
+    color:white;
+
+    /* fixed background castle style */
+    background:url("https://picsum.photos/1600/900?grayscale&blur=2") no-repeat center fixed;
+    background-size:cover;
+}
+
+/* overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:linear-gradient(rgba(0,0,80,0.7), rgba(120,0,120,0.7));
+    z-index:-1;
+}
+
+header{
+    font-size:40px;
+    padding:25px;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+/* grid */
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+/* cards */
+.card{
+    background:rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:20px;
+    transition:0.4s;
+    backdrop-filter:blur(8px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.card:hover{
+    transform:scale(1.08);
+    background:rgba(255,255,255,0.25);
+}
+
+.place{
+    font-size:22px;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.type{
+    color:#FFD700;
+}
+
+footer{
+    background:rgba(0,0,0,0.6);
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>✨ Disney World Attractions ✨</header>
+
+<div class="container">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?1">
+<div class="place">Magic Kingdom</div>
+<div class="type">Fantasy Park</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?2">
+<div class="place">EPCOT</div>
+<div class="type">Future & Culture</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?3">
+<div class="place">Hollywood Studios</div>
+<div class="type">Movie Theme Park</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?4">
+<div class="place">Animal Kingdom</div>
+<div class="type">Wildlife Adventure</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?5">
+<div class="place">Space Mountain</div>
+<div class="type">Roller Coaster</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?6">
+<div class="place">Pirates of the Caribbean</div>
+<div class="type">Boat Ride</div>
+</div>
+
+</div>
+
+<footer>Have a Magical Day ✨</footer>
+
+</body>
+</html>
