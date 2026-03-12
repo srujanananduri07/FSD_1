@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* Simple Selectors */
+        p { /* Element selector */ color: blue; } /*[web:1]*/
+        #unique { /* ID selector */ background-color: yellow; } /*[web:1]*/
+        .highlight { /* Class selector */ font-weight: bold; } /*[web:1]*/
+        h2, h3 { /* Group selector */ text-decoration: underline; } /*[web:1]*/
+        * { /* Universal selector */ margin: 10px 0; } /*[web:1]*/
+
+        /* Combinatory Selectors */
+        section p { /* Descendant selector */ font-style: italic; } /*[web:7]*/
+        ul > li { /* Child selector */ list-style-type: disc; } /*[web:7]*/
+        h1 + p { /* Adjacent sibling selector */ color: red; } /*[web:2]*/
+        h2 ~ p { /* General sibling selector */ border-left: 3px solid green; } /*[web:2]*/
+
+        /* Pseudo-class Selectors */
+        a:hover { /* Hover pseudo-class */ color: orange; } /*[web:3]*/
+        li:first-child { background-color: lightgreen; } /*[web:3]*/
+        li:last-child { background-color: lightcoral; } /*[web:3]*/
+
+        /* Pseudo-element Selectors */
+        p::first-letter { font-size: 2em; color: purple; } /*[web:4]*/
+        p::first-line { font-weight: bold; } /*[web:9]*/
+
+        /* Attribute Selectors */
+        [type="email"] { border: 2px solid blue; } /*[web:10]*/
+        [href^="https"] { color: green; } /*[web:10]*/
+        input[class*="required"] { background-color: pink; } /*[web:5]*/
+
+        /* CSS Properties: Color, Background, Font, Text */
+        body { 
+            color: #333; /* Text color */[web:19]
+            background-color: #f4f4f4; /* Background color */[web:15]
+            font-family: Arial, sans-serif; /* Font family */[web:17]
+            font-size: 16px; /* Font size */
+            text-align: justify; /* Text alignment */
+        }
+        .box-example {
+            background: linear-gradient(to right, red, blue); /* Background gradient */[web:15]
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow */
+            padding: 20px; /* Padding */
+        }
+
+        /* CSS Box Model */
+        .box-model {
+            width: 300px; /* Content width */
+            padding: 20px; /* Padding inside border */[web:16]
+            border: 5px solid #333; /* Border */[web:16]
+            margin: 20px; /* Margin outside border */[web:16]
+            box-sizing: border-box; /* Include padding/border in width */
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors and Properties Demo</h1>
+    
+    <p id="unique" class="highlight">This is a paragraph (element, ID, class selector).</p> <!-- Simple selectors demo -->
+    
+    <h2>Headings Group</h2> <!-- Group selector -->
+    <h3>Another heading</h3>
+    
+    <section> <!-- Combinatory demo -->
+        <p>Descendant paragraph inside section.</p>
+        <ul>
+            <li>Child list item 1 (first-child green).</li> <!-- Pseudo-class -->
+            <li>Child list item 2.</li>
+            <li>Child list item 3 (last-child coral).</li>
+        </ul>
+    </section>
+    
+    <h1>Heading</h1>
+    <p>Adjacent sibling to h1 (red).</p> <!-- Adjacent sibling -->
+    
+    <h2>Sibling Heading</h2>
+    <p>General sibling (green left border).</p> <!-- General sibling -->
+    <div>Other sibling.</div>
+    <p>Another general sibling (green left border).</p>
+    
+    <p>This paragraph shows ::first-letter (large purple) and ::first-line (bold).</p> <!-- Pseudo-elements -->
+    
+    <a href="https://example.com">External link (green, orange on hover).</a><br> <!-- Attribute & pseudo-class -->
+    <a href="http://internal">Internal link.</a>
+    
+    <input type="email" placeholder="Email (blue border)"><br> <!-- Attribute selector -->
+    <input class="required" type="text" placeholder="Required field (pink)">
+    
+    <div class="box-example">Demo of Color, Background, Font, Text properties.</div> <!-- Properties demo -->
+    
+    <div class="box-model">
+        Box Model Demo: Content + Padding + Border + Margin.
+    </div>
+</body>
+</html>

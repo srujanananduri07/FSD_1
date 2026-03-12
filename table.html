@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+ <h2>Student Marks Table</h2>
+    <table>
+        <!-- Table Header -->
+        <tr>
+            <th rowspan="2">Roll No</th>
+            <th rowspan="2">Name</th>
+            <th colspan="3">Marks</th>
+        </tr>
+        <tr>
+            <th>FSD</th>
+            <th>DBMS</th>
+            <th>OS</th>
+        </tr>
+
+        <!-- Table Rows -->
+        <tr>
+            <td>01</td>
+            <td>Srujana</td>
+            <td>85</td>
+            <td>78</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mounika</td>
+            <td>90</td>
+            <td>92</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Bhavya</td>
+            <td colspan="3">Absent</td>
+        </tr>
+    </table>
+
+</body>
+</html>

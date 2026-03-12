@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Demonstration</title>
+
+    <!-- Internal Style -->
+    <style>
+        /* Selector: h2 | Property: color | Value: blue */
+        h2 {
+            color: blue;
+        }
+
+        /* Selector: p | Property: font-size | Value: 18px */
+        p {
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- External Style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1 style="color: red; text-align: center;">
+        <!-- Inline Style -->
+        <!-- Selector: h1 | Property: color | Value: red -->
+        <!-- Selector: h1 | Property: text-align | Value: center -->
+        Inline Styled Heading
+    </h1>
+
+    <h2>Internal Styled Heading</h2>
+
+    <p>This paragraph is styled using internal CSS.</p>
+
+    <div class="box">This div is styled using external CSS.</div>
+</body>
+</html>
+/* Selector: .box | Property: border | Value: 2px solid green */
+/* Selector: .box | Property: padding | Value: 10px */
+/* Selector: .box | Property: background-color | Value: lightyellow */
+
+.box {
+    border: 2px solid green;
+    padding: 10px;
+    background-color: lightyellow;
+}
+<h1 style="color:red;">Heading</h1>
+h2 { color: blue; }
+.box { border: 2px solid green; }
