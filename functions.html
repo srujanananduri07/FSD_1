@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Functions</title>
+<script>
+
+function factorial(n){
+let fact = 1;
+for(let i=1;i<=n;i++){
+fact = fact * i;
+}
+alert("Factorial = " + fact);
+}
+
+function fibonacci(n){
+let a=0,b=1,c;
+let series="0 1 ";
+for(let i=2;i<n;i++){
+c=a+b;
+series += c + " ";
+a=b;
+b=c;
+}
+alert("Fibonacci Series: " + series);
+}
+
+function prime(n){
+let result="";
+for(let i=2;i<=n;i++){
+let flag=1;
+for(let j=2;j<i;j++){
+if(i%j==0){
+flag=0;
+break;
+}
+}
+if(flag==1){
+result += i + " ";
+}
+}
+alert("Prime Numbers: " + result);
+}
+
+function palindrome(n){
+let rev=0,temp=n;
+while(n>0){
+rev = rev*10 + n%10;
+n = Math.floor(n/10);
+}
+if(temp==rev)
+alert("Palindrome Number");
+else
+alert("Not a Palindrome");
+}
+
+</script>
+</head>
+<body>
+
+<script>
+let num = prompt("Enter a number");
+num = parseInt(num);
+
+factorial(num);
+fibonacci(num);
+prime(num);
+palindrome(num);
+</script>
+
+</body>
+</html>

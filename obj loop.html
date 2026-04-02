@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Loop</title>
+</head>
+<body>
+<script>
+    const person = {
+        name: "suji",
+        age: 19,
+        city: "Hyderabad"
+    };
+
+    document.write("<h3>for-in Loop</h3>");
+    for (let key in person) {
+        document.write(key + ": " + person[key] + "<br>");
+    }
+
+    document.write("<h3>forEach Loop</h3>");
+    Object.entries(person).forEach(([key, value]) => {
+        document.write(key + ": " + value + "<br>");
+    });
+
+    document.write("<h3>for-of Loop</h3>");
+    for (let [key, value] of Object.entries(person)) {
+        document.write(key + ": " + value + "<br>");
+    }
+</script>
+</body>
+</html>

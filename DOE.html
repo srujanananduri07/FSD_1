@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+</head>
+<body>
+
+<h2 id="demo">Hello World</h2>
+<button onclick="changeContent()">Click Me</button>
+
+<script>
+    function changeContent() {
+        // document property
+        console.log("Title of page: " + document.title);
+
+        // document method
+        document.getElementById("demo").innerHTML = "Content Changed!";
+        document.body.style.backgroundColor = "lightblue";
+    }
+</script>
+
+</body>
+</html>

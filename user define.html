@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+// Constructor
+function Student(name, age, marks) {
+    this.name = name;        // Property
+    this.age = age;
+    this.marks = marks;
+
+    // Method
+    this.display = function() {
+        return "Name: " + this.name + 
+               ", Age: " + this.age + 
+               ", Marks: " + this.marks;
+    };
+}
+
+// Creating object
+let s1 = new Student("Bhanu", 20, 85);
+
+// Accessor (Getter)
+Object.defineProperty(s1, "grade", {
+    get: function() {
+        return this.marks >= 50 ? "Pass" : "Fail";
+    }
+});
+
+document.write(s1.display() + "<br>");
+document.write("Grade: " + s1.grade);
+</script>
+
+</body>
+</html>
